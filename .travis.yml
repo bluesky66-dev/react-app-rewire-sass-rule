@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- 9.5.0
+deploy:
+  provider: npm
+  email: harunurhan17@gmail.com
+  api_key:
+    secure: LgE+TVI4aOUqV5cfKs+/xSryDT/MFy8xNBzLbmLm7y6hP8E7uWFi0hXDnDOrPrHgR+MXrzVycUEXjzs//u+OpGbwohT8eQRGMpFZS780/C+Avf784wH9Qko/tWsKoLOJdOUYi6LeTu+475FFw4UWAJgc2DmRnkorb14btWzu2dqC2kvbsIJUxThY9DzaNh11YQSdII/8RLiAq8Y2expf5ZCgW9KeIQsoVUc61vFJ5OrZTjDiMKFhtMVps+vxv4Z0Tg/Yygv02dB4NmClD/RnbcFfu6QlX4KhlqFT18drOFaAFn7/pXCEKgbN2+DRWK4mwFoZZV3be2z+djEYPT2DJZ1Xl2R8BvbrBGLm0pAuJV6TDc8lBS0sFAobDrZOrURBOld8yMpwZ7Pn0YeFv9F7qbI6n+8IhKnfVk3IJGPPxlK7/90f7JZWKdY8oihyY3/W10MsJGTrpaQPwBNT54UYhmpQQathZi94SzDLTK7Fg8EpmN041do6GoOk1tt6KNqW1vFfPRHvxugxbilFrWbbGon8MMK4fhU5VhhkGBEyy058HEkqETsVRnD3Wxo+hLx7UKldAmhZ1MbuzjS4ePY1SRRjmqSEKFSDoyf9HU/mxBpQ9iAfKwfKuEQyXhyFOT/KTogsgJp1Q3hQrFU3DGxzLYn+6/btpfxnLpbqYS0SfFY=
+  on:
+    tags: true
+    repo: harunurhan/react-app-rewire-sass-rule
+    branch: master
