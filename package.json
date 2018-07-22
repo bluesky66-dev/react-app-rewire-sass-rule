@@ -7,6 +7,7 @@
 	"author": "Harun Urhan <harunurhan17@gmail.com> (http://github.com/harunurhan)",
 	"bugs": "https://github.com/harunurhan/react-app-rewire-sass-rule/issues",
 	"scripts": {
+		"test": "echo NO_TESTS_YET",
 		"postversion": "git push origin && git push origin --tags"
 	},
 	"repository": {
