@@ -14,7 +14,7 @@ $ npm install react-app-rewired react-app-rewire-sass-rule --save-dev
 ## Usaga
 ```javascript
 /* config-overrides.js */
-const SassRuleRewirer = require('react-app-rewire-scss');
+const SassRuleRewirer = require('react-app-rewire-sass-rule');
 
 // Basic
 module.exports = function override(config, env) {
