@@ -1,3 +1,6 @@
+const path = require('path');
+
+
 function loaderNameMatches(rule, loaderName) {
 	return rule && rule.loader && typeof rule.loader === 'string' &&
 		(rule.loader.indexOf(`${path.sep}${loaderName}${path.sep}`) !== -1 ||
