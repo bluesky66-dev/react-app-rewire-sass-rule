@@ -1,4 +1,21 @@
-const { getLoader, loaderNameMatches } = require('react-app-rewired');
+function loaderNameMatches(rule, loaderName) {
+	return rule && rule.loader && typeof rule.loader === 'string' &&
+		(rule.loader.indexOf(`${path.sep}${loaderName}${path.sep}`) !== -1 ||
+			rule.loader.indexOf(`@${loaderName}${path.sep}`) !== -1);
+};
+
+function getLoader(rules, matcher) {
+	let loader;
+
+	rules.some(rule => {
+		return (loader = matcher(rule)
+			? rule
+			: getLoader(rule.use || rule.oneOf || (Array.isArray(rule.loader) && rule.loader) || [], matcher));
+	});
+
+	return loader;
+};
+
 
 class SassRuleRewirer {
 	constructor() {

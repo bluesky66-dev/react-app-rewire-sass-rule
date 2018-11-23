@@ -1,6 +1,14 @@
 # Rewire create-react-app to use SASS!
 
-Add SASS to your creat-react-app project without ejecting via [react-app-rewired](https://github.com/timarney/react-app-rewired).
+Add SASS to your creat-react-app project without ejecting 
+
+### Use v1.x or v2.x
+
+for [react-app-rewired](https://github.com/timarney/react-app-rewired)
+
+### Use v2.x
+
+for [craco](https://github.com/sharegate/craco)
 
 Inspired by [react-app-rewire-scss](https://github.com/aze3ma/react-app-rewire-scss). It has `withRuleOptions`which allows you to configure the rule options except `test` and `use`
 
