@@ -45,7 +45,7 @@ class SassRuleRewirer {
 		const cssRules = getLoader(config.module.rules, rule => String(rule.test) === String(/\.css$/));
 		var sassRules;
 
-		const { ...otherRulesOptions, use } = this.ruleOptions;
+		const { use, ...otherRulesOptions } = this.ruleOptions;
 
 		if (isDev) {
 			sassRules = {
