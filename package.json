@@ -1,7 +1,7 @@
 {
 	"name": "react-app-rewire-sass-rule",
 	"description": "Add SASS to create-react-app project with react-app-rewired",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"main": "index.js",
 	"license": "MIT",
 	"author": "Harun Urhan <harunurhan17@gmail.com> (http://github.com/harunurhan)",
