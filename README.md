@@ -10,7 +10,7 @@ for [react-app-rewired](https://github.com/timarney/react-app-rewired)
 
 for [craco](https://github.com/sharegate/craco)
 
-Inspired by [react-app-rewire-scss](https://github.com/aze3ma/react-app-rewire-scss). It has `withRuleOptions`which allows you to configure the rule options except `test` and `use`
+Inspired by [react-app-rewire-scss](https://github.com/aze3ma/react-app-rewire-scss). It has `withRuleOptions`which allows you to configure the rule options except `test`
 
 ## Install
 

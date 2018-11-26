@@ -45,17 +45,19 @@ class SassRuleRewirer {
 		const cssRules = getLoader(config.module.rules, rule => String(rule.test) === String(/\.css$/));
 		var sassRules;
 
+		const { ...otherRulesOptions, use } = this.ruleOptions;
+
 		if (isDev) {
 			sassRules = {
-				...this.ruleOptions,
+				...otherRulesOptions,
 				test: sassExtension,
-				use: [...cssRules.use, { loader: 'sass-loader', options: this.loaderOptions }],
+				use: [...cssRules.use, { loader: 'sass-loader', options: this.loaderOptions }].concat(use),
 			};
 		} else {
 			sassRules = {
 				...this.ruleOptions,
 				test: sassExtension,
-				use: [...cssRules.loader, { loader: 'sass-loader', options: this.loaderOptions }],
+				use: [...cssRules.loader, { loader: 'sass-loader', options: this.loaderOptions }].concat(use),
 			};
 		}
 
