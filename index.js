@@ -35,14 +35,13 @@ class SassRuleRewirer {
 		return this;
 	}
 
-	rewire(config, env) {
+	rewire(config) {
 		const sassExtension = /(\.scss|\.sass)$/;
 		const fileLoader = getLoader(config.module.rules, rule => loaderNameMatches(rule, 'file-loader'));
 
 		fileLoader.exclude.push(sassExtension);
 
 		const cssRules = getLoader(config.module.rules, rule => String(rule.test) === String(/\.css$/));
-		var sassRules;
 
 		const { use, ...otherRulesOptions } = this.ruleOptions;
 
