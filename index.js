@@ -37,7 +37,6 @@ class SassRuleRewirer {
 
 	rewire(config, env) {
 		const sassExtension = /(\.scss|\.sass)$/;
-		const isDev = env !== 'production';
 		const fileLoader = getLoader(config.module.rules, rule => loaderNameMatches(rule, 'file-loader'));
 
 		fileLoader.exclude.push(sassExtension);
@@ -47,19 +46,11 @@ class SassRuleRewirer {
 
 		const { use, ...otherRulesOptions } = this.ruleOptions;
 
-		if (isDev) {
-			sassRules = {
-				...otherRulesOptions,
-				test: sassExtension,
-				use: [...cssRules.use, { loader: 'sass-loader', options: this.loaderOptions }].concat(use),
-			};
-		} else {
-			sassRules = {
-				...this.ruleOptions,
-				test: sassExtension,
-				use: [...cssRules.loader, { loader: 'sass-loader', options: this.loaderOptions }].concat(use),
-			};
-		}
+		const sassRules = {
+			...otherRulesOptions,
+			test: sassExtension,
+			use: [...cssRules.use, { loader: 'sass-loader', options: this.loaderOptions }].concat(use),
+		};
 
 		const oneOfRule = config.module.rules
 			.find(rule => rule.oneOf != null);
